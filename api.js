@@ -28,7 +28,7 @@ router.get('/image', function(req, res) {
               if(results.tags[0].probability == null) {
                 results.tags[0].probability = results.tags[0].conceptId;
               }
-              res.send('' + ((result/highest[1]) * results.tags[0].probability));
+              res.send('' + ((result/highest[1]) * results.tags[0].probability || 0));
             } else {
               res.status(500).send(err);
             }
