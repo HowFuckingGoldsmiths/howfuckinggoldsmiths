@@ -1,0 +1,25 @@
+{
+  "name": "howfuckinggoldsmiths",
+  "version": "0.0.1",
+  "description": "Find out how fucking Goldsmiths an image is",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sprusr/howfuckinggoldsmiths.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sprusr/howfuckinggoldsmiths/issues"
+  },
+  "homepage": "https://github.com/sprusr/howfuckinggoldsmiths#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "clarifai": "^0.4.0",
+    "express": "^4.13.4",
+    "redis": "^2.6.0-2"
+  }
+}
