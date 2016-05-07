@@ -1,8 +1,14 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var Clarifai = require('clarifai');
 var redis = require("redis");
 
 var router = express.Router();
+
+router.use(bodyParser.urlencoded({
+  extended: true
+}));
+router.use(bodyParser.json());
 
 var cla = new Clarifai({
   id: process.env.CLARIFAI_ID,
