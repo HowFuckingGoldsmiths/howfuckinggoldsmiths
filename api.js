@@ -61,4 +61,22 @@ router.post('/image/tag', function(req, res) {
   });
 });
 
+// tell the api this image is not fucking goldsmiths
+router.post('/image/antitag', function(req, res) {
+  cla.tagFromUrls('image', req.body.url, function(err, results) {
+    if(!err) {
+      results.tags.forEach(function(tag) {
+        if(tag.probability == null) {
+          tag.probability = tag.conceptId;
+        }
+        red.zincrby('tags', -tag.probability, tag.class);
+      });
+
+      res.send('Anit-tagged!');
+    } else {
+      res.status(500).send(err);
+    }
+  });
+});
+
 module.exports = router;
