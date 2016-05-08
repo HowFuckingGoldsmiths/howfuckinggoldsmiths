@@ -10,8 +10,19 @@
   <h2>Endpoints</h2>
   <p>There are two endpoints in the v1 api.</p>
   <ul>
-    <li><code>GET api.howfuckinggoldsmiths.tech/v1/image?url=[url]</code> where <code>[url]</code> is the image</li>
+    <li><code>GET api.howfuckinggoldsmiths.tech/v1/image?url=[url]</code> where <code>[url]</code> is the urlencoded image url</li>
     <li><code>POST api.howfuckinggoldsmiths.tech/v1/image/tag</code> with <code>url</code> of image in body</li>
   </ul>
+  <h2>Examples</h2>
+  <h3>Get image score</h3>
+  <form action="api.howfuckinggoldsmiths.tech/v1/image" method="get">
+    <input type="text" name="url">
+    <input type="submit">
+  </form>
+  <h3>Tag image</h3>
+  <form action="api.howfuckinggoldsmiths.tech/v1/image/tag" method="post">
+    <input type="text" name="url">
+    <input type="submit">
+  </form>
 </body>
 </html>
